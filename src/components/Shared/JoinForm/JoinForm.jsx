@@ -51,6 +51,7 @@ export const JoinForm = ({formId}) => {
         <CustomInput
           type="text"
           label="Company Name"
+          name="company"
           value={company}
           onChange={handleChange}
         />

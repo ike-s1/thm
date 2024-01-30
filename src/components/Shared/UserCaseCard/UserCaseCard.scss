@@ -1,0 +1,60 @@
+@import '../../../styles/variables/variables';
+
+.user-case-card {
+    width: 500px;
+    height: 331px;
+    border-radius: 12px;
+    background: $color_black;
+    padding: 1px 1px 9px 1px;
+    transition: all 0.3s linear;
+
+    &:hover {
+        transform: rotate(10deg);
+    }
+
+    .user-case-content {
+        width: 495px;
+        height: 321px;
+        display: flex;
+        flex-direction: column;
+        background: $color_white;
+        border-radius: 12px;
+        padding: 30px;
+
+        .case-title {
+            padding-left: 43px;
+            font-weight: 800;
+            margin-bottom: 22px;
+            position: relative;
+
+            &:before {
+                content: "";
+                display: block;
+                height: 2px;
+                background-color: $color_black;
+                width: 34px;
+                position: absolute;
+                left:0;
+                top: 50%;
+                transform: translateY(-50%);
+              }
+        }
+
+        .case-text {
+            margin-bottom: 9px;
+        }
+
+        .case-label {
+            display: flex;
+            column-gap: 26px;
+            align-self: flex-end;
+            margin-top: auto;
+            font-size: 20px;
+            text-align: right;
+
+            .user-title {
+                font-weight: 700;
+            }
+        }
+    }
+}

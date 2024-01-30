@@ -1,0 +1,29 @@
+@import '../../../styles/variables/variables';
+
+.ckeckbox-container {
+    width: 100%;
+    height: 69px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 2px solid $color_black;
+    color: #A1A1A1;
+    cursor: pointer;
+
+    .checkbox-label {
+        width: 30px;
+        height: 30px;
+        margin-right: 29px;
+    }
+
+    .checkbox-number {
+        font-weight: 700;
+        margin-right: 10px;
+    }
+
+    &.checked {
+        .checkbox-number, .checkbox-text {
+            color: $color_black;
+        }
+    }
+}

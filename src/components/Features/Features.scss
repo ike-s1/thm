@@ -1,0 +1,21 @@
+.features-section {
+    height: 1054px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .features-list {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 60px;
+    }
+
+    .custom-button {
+        width: 397px;
+        height: 52px;
+    }
+}

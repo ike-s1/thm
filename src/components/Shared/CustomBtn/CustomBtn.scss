@@ -1,0 +1,73 @@
+@import '../../../styles/variables/variables';
+
+.custom-button {
+    width: 234px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    border-radius: 12px;
+    box-sizing: content-box;
+
+    &:disabled {
+        cursor: not-allowed;
+    }
+
+    &.primary-main {
+        background: $color-black;
+        color: $color-white;
+        &:hover {
+            background: $color-accent;
+            color: $color-black;
+        }
+        &:active {
+            box-shadow: 0 0 0 4px $color-accent;
+        }
+    }
+
+    &.secondary-main {
+        border: 2px solid $color-black;
+        &:hover {
+            border-color: $color-accent;
+        }
+        &:active {
+            background: $color-accent;
+        }
+    }
+
+    &.secondary-accent {
+        border: 2px solid $color-black;
+        &:hover {
+            border-color: $color-white;
+        }
+        &:active {
+            background: $color-white;
+            border-color: $color-white;
+        }
+    }
+
+    &.primary-accent {
+        background: $color-black;
+        color: $color-white;
+        &:hover {
+            background: $color-white;
+            color: $color-black;
+        }
+        &:active {
+            box-shadow: 0 0 0 4px $color-white;
+        }
+    }
+
+    &.footer-btn {
+        color: $color-white;
+        border: 2px solid $color-white;
+        &:hover {
+            background: $color-white;
+            color: $color-black;
+        }
+        &:active {
+            box-shadow: 0 0 0 4px $color-white;
+        }
+    }
+}

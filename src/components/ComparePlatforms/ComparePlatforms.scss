@@ -1,0 +1,29 @@
+.compare-platforms-section {
+    width: 1020px;
+    height: 961px;
+
+    .compare-platforms-title {
+        padding-top: 100px;
+        padding-bottom: 106px;
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            bottom: -35px;
+            left: 50%;
+            width: 578px;
+            height: 100%;
+            transform: translate(-50%, 50%);
+            background: url(/src/assets/underline_big.svg) no-repeat;
+            z-index: -1;
+        }
+    }
+
+    .custom-button {
+        width: 396px;
+        height: 52px;
+        margin: 0 auto;
+    }
+
+}

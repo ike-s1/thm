@@ -1,0 +1,78 @@
+@import '../../styles/variables/variables';
+
+.footer {
+    height: 619px;
+    width: 100%;
+    background: $color-black;
+    border-radius: 20px 20px 0px 0px;
+    color: $color-white;
+    position: relative;
+    overflow: hidden;
+    padding-top: 76px;
+
+    .footer-content {
+        width: 1228px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns:  68fr 32fr;
+
+        .column-title {
+            opacity: 0.5;
+            margin-bottom: 18px;
+        }
+
+        .column-item {
+            margin-bottom: 18px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .allRights-column {
+            width: 100%;
+
+            .footer-logo {
+                margin-bottom: 18px;
+            }
+        }
+        
+        .right-column {
+            display: flex;
+            justify-content: space-between;
+
+            .nav-column {
+                width: 188px;
+
+                li {
+                    cursor: pointer;
+                }
+            }
+
+            .contact-us-column {
+                width: 131px;
+            }
+        }
+
+    }
+
+
+    .footer-logo-big {
+        position: absolute;
+        bottom: -10px;
+        animation: slideLeftRight 10s linear infinite;
+        /* Adjust the duration as needed */
+    }
+
+    @keyframes slideLeftRight {
+        from {
+            left: -100%;
+        }
+
+        to {
+            left: 100%;
+        }
+
+    }
+
+}

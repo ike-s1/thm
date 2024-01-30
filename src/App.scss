@@ -1,0 +1,25 @@
+@import './styles/variables/variables';
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: $main-font;
+    line-height: normal;
+    width: 100%;
+
+    .bold-text {
+        font-weight: 800;
+    }
+
+    .title {
+        padding-top: 160px;
+        padding-bottom: 118px;
+        color: $color-black;
+        text-align: center;
+        font-size: 56px;
+        font-weight: 700;
+        line-height: 100%;
+    }
+}

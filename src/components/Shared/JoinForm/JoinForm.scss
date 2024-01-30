@@ -1,0 +1,80 @@
+@import '../../../styles/variables/variables';
+
+.join-form-container {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: $color_bg;
+    position: relative;
+
+    &.hide-active {
+        .cursor {
+            display: none;
+        }
+
+        .custom-input:nth-child(2) {
+            &:not(:focus-within) {
+                border-color: transparent;
+              }
+        }
+    }
+
+    .cursor {
+        position: absolute;
+        top: 55%;
+        left: 19%;
+        transform: translate(50%, -50%);
+        z-index: 5;
+    }
+
+
+    .join-form-title {
+        width: fit-content;
+        font-size: 40px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 2;
+
+        &:before {
+            content: "";
+            position: absolute;
+            bottom: -21px;
+            left: 50%;
+            width: 344px;
+            height: 100%;
+            transform: translate(-50%, 50%);
+            background: url(/src/assets/underline_small.svg) no-repeat;
+            z-index: -1;
+        }
+    }
+
+    .join-form-subtitle {
+        opacity: 0.5;
+        font-size: 14px;
+        margin-bottom: 22px;
+    }
+
+    .form-btns-block {
+        display: flex;
+        justify-content: center;
+        column-gap: 31px;
+        margin-top: 22px;
+    }
+
+    form {
+        width: 100%;
+
+        .custom-input:nth-child(2) {
+            border-color: $color_accent;
+        }
+
+        input {
+            width: 100%;
+
+        }
+    }
+
+}

@@ -1,0 +1,13 @@
+.arrow-small {
+    position: absolute;
+    z-index: 1;
+    top: 30%;
+    left: 42%;
+    transform: translateY(-100%);
+}
+
+.three {
+    .user-case-card:hover {
+        transform: rotate(-10deg);
+    }
+}

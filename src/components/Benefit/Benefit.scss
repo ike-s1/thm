@@ -1,0 +1,22 @@
+.benefit-container {
+    width: 100%;
+
+    .benefit-section {
+        height: 704px;
+        display: flex;
+        align-items: center;
+
+        .benefit-content {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+
+            .text-block-title {
+                margin-bottom: 24px;
+            }
+
+        }
+    }
+}

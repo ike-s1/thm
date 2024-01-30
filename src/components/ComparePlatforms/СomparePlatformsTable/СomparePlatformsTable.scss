@@ -1,0 +1,89 @@
+@import '../../../styles/variables/variables';
+
+.compare-platforms-table {
+  background-color: #ffffff;
+  border-radius: 2px;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin-bottom: 60px;
+
+
+
+  thead {
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-color: #000000;
+    height: 40px;
+    left: 0;
+    display: grid;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 700;
+
+    th {
+      width: 100%;
+      text-align: center;
+
+      &:first-child {
+        text-align: left;
+      }
+    }
+  }
+
+  tr {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    justify-items: center;
+  }
+
+  tbody {
+
+    tr {
+      border-bottom: 2px solid $color_black;
+    }
+
+    td {
+      width: 100%;
+      text-align: center;
+      font-size: 20px;
+      height: 80px;
+      padding-bottom: 15px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+
+      &:first-child {
+        justify-content: flex-start;
+      }
+
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .ellipse {
+          background-color: #37FF64;
+          height: 14px;
+          width: 14px;
+          border-radius: 7px;
+          margin-right: 7px;
+        }
+
+      }
+
+    }
+
+    .yes {
+      font-weight: 700;
+    }
+
+    .no {
+      .ellipse {
+        background-color:#F07676;
+      }
+    }
+
+  }
+}

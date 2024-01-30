@@ -1,0 +1,43 @@
+.step-three-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .step-title-box {
+        position: relative;
+        height: 102px;
+        width: 803px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            position: absolute;
+            top: 32%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+    }
+
+    .step-three-title {
+        font-size: 56px;
+        font-weight: 700;
+        margin-bottom: 34px;
+    }
+
+    .step-three-text {
+        max-width: 604px;
+        font-size: 20px;
+        letter-spacing: -0.2px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .custom-button {
+        width: 604px;
+    }
+}

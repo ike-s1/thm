@@ -4,6 +4,31 @@
     flex-direction: column;
     align-items: center;
 
+    .features-title-box {
+        position: relative;
+        display: flex;
+        height: 84px;
+        width: 433px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin: 151px 0 101px 0;
+
+        img {
+            position: absolute;
+            width: 433px;
+            top: 52%;
+            left: 51%;
+            transform: translate(-50%, -50%);
+        }
+
+    }
+
+    .features-title {
+        padding: 0;
+        z-index: 1;
+    }
+
     .features-list {
         width: 100%;
         display: flex;

@@ -62,10 +62,11 @@ export const StepTwo = () => {
             number={index + 1}
             onClick={() => handleCheckboxClick(index)}
             checked={selectedCheckboxes.includes(index)}
+            done={selectedCheckboxes.length === 3}
           />
         ))}
       </div>
-      <CustomButton text="Confirm" disabled={!(selectedCheckboxes.length === 3)} onClick={handleConfirmClick} />
+      <CustomButton text="Confirm"  onClick={handleConfirmClick} />
     </div>
   );
 };

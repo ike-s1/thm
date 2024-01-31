@@ -7,8 +7,12 @@
     align-items: center;
     justify-content: flex-start;
     border-bottom: 2px solid $color_black;
-    color: #A1A1A1;
+    color:  $color_black;
     cursor: pointer;
+
+    &.done {
+        color: #A1A1A1; 
+    }
 
     .checkbox-label {
         width: 30px;
@@ -21,9 +25,4 @@
         margin-right: 10px;
     }
 
-    &.checked {
-        .checkbox-number, .checkbox-text {
-            color: $color_black;
-        }
-    }
 }

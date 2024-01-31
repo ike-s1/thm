@@ -1,10 +1,12 @@
 import React from "react";
 import "./Header.scss";
-import logoBlack from "../../assets/logo-black.png";
-import { Link } from "react-router-dom";
+import logoBlack from "../../assets/logo-black.svg";
+import { Link,useLocation } from "react-router-dom";
 
 const Header = () => {
   const navElements = ["About", "Features", "User Cases", "Compare Platforms"];
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   return (
     <header>
@@ -15,11 +17,11 @@ const Header = () => {
         <nav className="header-nav">
           {navElements.map((e) => (
             <p key={e} className="header-link">
-              <a href={`#${e}`}>{e}</a>
+              <a href={`#${e}`}><span>{e}</span><span className="hover-item">{e}</span></a>
             </p>
           ))}
         </nav>
-        <button className="get-started-btn">
+        <button className={`get-started-btn ${isHomePage? '' : 'hidden'}`}>
           <a href="#Hero">Get Started for Free</a>
         </button>
       </div>

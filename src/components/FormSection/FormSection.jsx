@@ -9,7 +9,7 @@ const formTextData = {
 };
 export const FormSection = () => {
   return (
-    <section className="form-section">
+    <section className="form-section" id="Book">
       <div className="form-text-block">
         <TextBlock textBlockData={formTextData} displayBtn={false} />
       </div>

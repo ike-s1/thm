@@ -12,8 +12,25 @@
   border-radius: 12px;
   border: 1px solid transparent;
 
+  &:hover {
+    border-color: $color_accent;
+  }
+
+  &.error {
+    border-color: #F07676;
+  }
+
   &:focus-within {
     border-color: $color_accent;
+
+    .input-label {
+      display: inline;
+    }
+
+    input::placeholder {
+      color: transparent;
+    }
+
   }
 
 
@@ -26,18 +43,33 @@
     font-weight: 700;
     padding: 0 5px;
     caret-color: $color_accent;
+    
 
     &::placeholder {
+      font-weight: 600;
       color: $color_black;
     }
 
+    &.filled {
+      + .input-label {
+        display: inline;
+      }
+    }
+
+
   }
 
-  label {
+  .input-label {
     font-size: 10px;
     font-weight: 500;
     opacity: 0.2;
     margin-bottom: 2px;
+    display: none;
+    padding-left: 5px;
+
+    &.filled {
+      display: inline;
+    }
   }
 
 

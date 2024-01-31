@@ -36,14 +36,64 @@ header {
         justify-content: space-between;
         column-gap: 60px;
 
-        p:hover {
-            text-decoration-line: underline; 
-            -webkit-text-stroke: 0.4px $color_black;
+        a {
+            display: inline-flex;
+            flex-direction: column;
+            position: relative;
+
+            span {
+                visibility: hidden;
+                white-space: nowrap;
+                position: relative;
+            }
+
+            .hover-item {
+                position: absolute;
+                visibility: visible;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                white-space: nowrap;
+                font-weight: normal;
+            }
+
+
+            &:hover .hover-item {
+                text-decoration-line: underline;
+                font-weight: 700;
+            }
+
+
+            &:active .hover-item {
+                font-weight: 800;
+            }
+
+
+            &::after {
+                content: attr(data-text);
+                content: attr(data-text) / "";
+                height: 0;
+                visibility: hidden;
+                overflow: hidden;
+                user-select: none;
+                pointer-events: none;
+                font-weight: 700;
+            }
         }
+
     }
 
     .get-started-btn {
         font-weight: 700;
         text-decoration-line: underline;
+        width: 159px;
+
+        &.hidden {
+            visibility: hidden;
+        }
+
+        &:hover {
+            font-weight: 900;
+        }
     }
 }

@@ -1,6 +1,12 @@
 .compare-platforms-section {
-    width: 1020px;
     height: 961px;
+    width: 100%;
+    background-color: #FFF;
+
+    .compare-platforms-content {
+        width: 1020px;
+        margin: 0 auto;
+    }
 
     .compare-platforms-title {
         padding-top: 100px;

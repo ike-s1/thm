@@ -5,6 +5,7 @@ import { LandingPage } from "./pages/LandingPage/LandingPage";
 import { createBrowserRouter, RouterProvider, Route, Outlet } from "react-router-dom";
 import { StepTwo } from "./pages/StepTwo/StepTwo";
 import { StepThree } from "./pages/StepThree/StepThree";
+import { NotFoundPage } from "./pages/NotFoundPage/NotFoundPage";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,16 @@ const router = createBrowserRouter([
       </>
     ),
     children: [{  index: true, element: <StepThree/> }],
+  },
+  {
+    path: "*",
+    element: (
+      <>
+        <Header />
+        <NotFoundPage/>
+        <Footer />
+      </>
+    ),
   },
 ]);
 

@@ -9,26 +9,6 @@
     background: $color_bg;
     position: relative;
 
-    &.hide-active {
-        .cursor {
-            display: none;
-        }
-
-        .custom-input:nth-child(2) {
-            &:not(:focus-within) {
-                border-color: transparent;
-              }
-        }
-    }
-
-    .cursor {
-        position: absolute;
-        top: 55%;
-        left: 19%;
-        transform: translate(50%, -50%);
-        z-index: 5;
-    }
-
 
     .join-form-title {
         width: fit-content;
@@ -66,10 +46,6 @@
 
     form {
         width: 100%;
-
-        .custom-input:nth-child(2) {
-            border-color: $color_accent;
-        }
 
         input {
             width: 100%;

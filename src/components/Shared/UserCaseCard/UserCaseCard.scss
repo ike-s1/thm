@@ -6,10 +6,10 @@
     border-radius: 12px;
     background: $color_black;
     padding: 1px 1px 9px 1px;
-    transition: all 0.3s linear;
+    transition: all 0.4s ease-in-out;
 
     &:hover {
-        transform: rotate(10deg);
+        transform: rotate(3deg);
     }
 
     .user-case-content {

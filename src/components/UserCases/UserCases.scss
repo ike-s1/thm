@@ -2,46 +2,58 @@
 
 .user-cases-section {
     width: 100%;
-    max-width: 1518px;
     margin: 0 auto;
     height: 795px;
     position: relative;
+    background-color: #FFF;
+
+    .user-cases-content {
+        max-width: 1518px;
+        margin: 0 auto;
+    }
     
     .user-case-card:hover {
         transform: unset;
     }
     
-    .cursor-icon {
-        position: absolute;
-        top: 90%;
-        right: 43%;
-        transition: opacity 0.3s ease;
-    }
 
-    .user-cases-swiper {
+    .swiper {
         padding-bottom: 60px;
+        width: 100%;
+
 
         .user-case-card {
-            
+            min-width: 500px!important;
+            opacity: 0.5;
+
+            @media (max-width: 1517px) {
+                min-width: unset!important;
+            }
+
             .user-case-content {
                 width: calc(100% - 6px);
             }
         }
 
+
         .swiper-slide {
             display: flex;
             justify-content: center;
-            cursor: grab;
+            align-items: center;
+
+            &-active {
+                .user-case-card {
+                    opacity: 1;
+                }
+            }
+
+        
         }
 
         .swiper-pagination {
             column-gap: 27px;
             display: flex;
             justify-content: center;
-
-            .swiper-pagination-bullet:last-child {
-                opacity: 1;
-            }
 
             .swiper-pagination-bullet {
                 width: 8px;
@@ -57,17 +69,5 @@
             }
         }
 
-        .swiper-slide-prev,
-        .swiper-slide-next {
-            .user-case-card {
-                background: #A1A1A1;
-                color: #A1A1A1;
-
-                .case-title:before {
-                    background:#A1A1A1;
-                }
-                
-            }
-          }
     }
 }

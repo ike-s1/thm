@@ -14,7 +14,19 @@
         width: 1228px;
         margin: 0 auto;
         display: grid;
-        grid-template-columns:  68fr 32fr;
+        grid-template-columns: 68fr 32fr;
+
+        a {
+            &:hover {
+                color: $color_accent;
+                text-decoration: underline;
+                font-weight: 600;
+            }
+
+            &:active {
+                font-weight: 800;
+            }
+        }
 
         .column-title {
             opacity: 0.5;
@@ -36,7 +48,7 @@
                 margin-bottom: 18px;
             }
         }
-        
+
         .right-column {
             display: flex;
             justify-content: space-between;
@@ -60,8 +72,7 @@
     .footer-logo-big {
         position: absolute;
         bottom: -10px;
-        animation: slideLeftRight 10s linear infinite;
-        /* Adjust the duration as needed */
+        animation: slideLeftRight 70s linear infinite;
     }
 
     @keyframes slideLeftRight {

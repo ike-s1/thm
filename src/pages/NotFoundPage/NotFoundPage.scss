@@ -1,0 +1,38 @@
+.not-found-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .not-found-title-box {
+        position: relative;
+        height: 124px;
+        width: 804px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+
+        .not-found-title {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 34px;
+            z-index: 5;
+        }
+
+        img {
+            position: absolute;
+            top: 34%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    }
+
+
+    .custom-button {
+        width: 604px;
+    }
+}

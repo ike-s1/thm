@@ -60,6 +60,10 @@
                 height: 8px;
                 background: $color_accent;
                 opacity: 0.3;
+
+                &:hover {
+                      opacity: 1;
+                }
             }
 
             .swiper-pagination-bullet-active {

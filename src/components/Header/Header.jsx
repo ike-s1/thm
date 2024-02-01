@@ -22,7 +22,7 @@ const Header = () => {
           ))}
         </nav>
         <button className={`get-started-btn ${isHomePage? '' : 'hidden'}`}>
-          <a href="#Hero">Get Started for Free</a>
+          <a href="#Book">Get Started for Free</a>
         </button>
       </div>
     </header>

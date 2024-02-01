@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import "./UserCases.scss";
 import { UserCaseCard } from "../Shared/UserCaseCard/UserCaseCard";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination} from "swiper/modules";
 
 const SwiperSlidesArray = [
   {
@@ -37,22 +36,7 @@ const SwiperSlidesArray = [
 ];
 
 export const UserCases = () => {
-  const [swiperInstance, setSwiperInstance] = useState(null);
-  const [activeIndex, setActiveIndex] = useState(null);
 
-  const handleSwiperInit = (swiper) => {
-    if (swiper) {
-      setSwiperInstance(swiper);
-    }
-  };
-
-  const handleSlideChange = () => {
-    if (swiperInstance) {
-        setActiveIndex(swiperInstance.activeIndex)
-    }
-  };
-
-  console.log(swiperInstance?.activeIndex)
 
   return (
     <section className={"user-cases-section"} id="User Cases">
@@ -66,9 +50,7 @@ export const UserCases = () => {
             clickable: true,
           }}
           slidesPerView={2.95}
-          onSwiper={handleSwiperInit}
-          loop={activeIndex > 0}
-          onSlideChange={handleSlideChange}
+          loop={true}
         >
           {SwiperSlidesArray.map((data, index) => {
             return (

@@ -47,6 +47,10 @@
                 }
             }
 
+            &-prev.hide {
+                visibility: hidden;
+            }
+
         
         }
 
@@ -62,7 +66,7 @@
                 opacity: 0.3;
 
                 &:hover {
-                      opacity: 1;
+                    opacity: 1;
                 }
             }
 

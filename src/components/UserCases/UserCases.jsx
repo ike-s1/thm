@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./UserCases.scss";
 import { UserCaseCard } from "../Shared/UserCaseCard/UserCaseCard";
 
@@ -36,10 +36,21 @@ const SwiperSlidesArray = [
 ];
 
 export const UserCases = () => {
+  const [hidePrevSlide, setHidePrevSlide] = useState(true);
+  const [swiper, setSwiper] = useState(null);
 
+  const handleSlideChange = (curSwiper) => {
+    if ((swiper?.activeIndex  - 1)< curSwiper.activeIndex) {
+      setHidePrevSlide(false);
+    }
+  };
+
+  const handleSwiperInit = (swiper) => {
+    setSwiper(swiper);
+  };
 
   return (
-    <section className={"user-cases-section"} id="User Cases">
+    <section className="user-cases-section" id="User Cases">
       <div className="user-cases-content">
         <h2 className="cases-title title">User Cases</h2>
         <Swiper
@@ -51,10 +62,12 @@ export const UserCases = () => {
           }}
           slidesPerView={2.95}
           loop={true}
+          onSlideChange={handleSlideChange}
+          onSwiper={handleSwiperInit}
         >
           {SwiperSlidesArray.map((data, index) => {
             return (
-              <SwiperSlide key={index}>
+              <SwiperSlide key={index} className={hidePrevSlide ? "hide" : ""}>
                 <UserCaseCard userCaseData={data} />
               </SwiperSlide>
             );

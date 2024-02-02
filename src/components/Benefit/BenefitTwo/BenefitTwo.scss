@@ -1,4 +1,13 @@
 .two {
+
+   .benefit-content {
+   
+    @media (max-width: 1280px) {
+        flex-direction: column!important;
+        
+    }
+
+   }
     .arrow-medium {
         position: absolute;
         z-index: 1;
@@ -9,5 +18,9 @@
 
     .text-block-text {
         max-width: 580px;
+
+        @media (max-width: 1280px) {
+            max-width: 100%;  
+        }
     }
 }

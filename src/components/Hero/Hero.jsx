@@ -4,7 +4,6 @@ import Header from "../Header/Header";
 import Typewriter from "typewriter-effect";
 import { JoinForm } from "../Shared/JoinForm/JoinForm";
 
-
 const Hero = () => {
   const typewriterStrings = ["Founders", "Organizations", "Media"];
   return (
@@ -38,7 +37,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="hero-early-acess">
-          <JoinForm  formId="1"/>
+          <JoinForm formId="1" />
         </div>
       </div>
     </section>

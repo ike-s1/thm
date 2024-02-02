@@ -3,15 +3,35 @@
     width: 100%;
     background-color: #FFF;
 
+    @media (max-width: 1280px) {
+       height: auto;
+       padding: 0 40px;
+    }
+
+    @media (max-width: 768px) {
+        display: none;
+     }
+    
+
     .compare-platforms-content {
         width: 1020px;
         margin: 0 auto;
+
+        @media (max-width: 1280px) {
+            width: 100%;
+        }
     }
 
     .compare-platforms-title {
         padding-top: 100px;
         padding-bottom: 106px;
         position: relative;
+        z-index: 2;
+
+        @media (max-width: 1280px) {
+            padding-top: 80px;
+            padding-bottom: 60px;
+        }
 
         &:before {
             content: "";
@@ -30,6 +50,15 @@
         width: 396px;
         height: 52px;
         margin: 0 auto;
+
+        @media (max-width: 1280px) {
+           width: 319px;
+           margin-bottom: 80px;
+         }
+         @media (max-width: 960px) {
+            width: 334px;
+          }
+         
     }
 
 }

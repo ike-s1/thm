@@ -2,9 +2,9 @@ import React from "react";
 import "./BenefitThree.scss";
 import { UserCaseCard } from "../../Shared/UserCaseCard/UserCaseCard";
 import { TextBlock } from "../../Shared/TextBlock/TextBlock";
-import  arrowSmall   from "../../../assets/arrow-small.svg";
+import arrowSmall from "../../../assets/arrow-small.svg";
 import { BTN_TYPES } from "../../../constants/BtnTypes";
-
+import { CustomButton } from "../../Shared/CustomBtn/CustomBtn";
 
 const userCaseData = {
   name: "Oliver Harrison",
@@ -18,15 +18,18 @@ const textBlockData = {
   btnText: "Add to Your Surveys",
 };
 
-
 export const BenefitThree = () => {
   return (
-        <section className="benefit-section three">
-          <div className="benefit-content">
-            <img src={arrowSmall} className="arrow-small" alt="arrow"/>
-            <UserCaseCard userCaseData={userCaseData} />
-            <TextBlock  textBlockData={textBlockData} btnType={BTN_TYPES.PRIMARY_ACCENT}/>
-          </div>
-        </section>
+    <section className="benefit-section three">
+      <div className="benefit-content">
+        <CustomButton text={textBlockData.btnText} className="adaptive-btn" />
+        <img src={arrowSmall} className=" arrow arrow-small" alt="arrow" />
+        <UserCaseCard userCaseData={userCaseData} />
+        <TextBlock
+          textBlockData={textBlockData}
+          btnType={BTN_TYPES.PRIMARY_ACCENT}
+        />
+      </div>
+    </section>
   );
 };

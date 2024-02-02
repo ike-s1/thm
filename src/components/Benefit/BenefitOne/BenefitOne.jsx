@@ -3,6 +3,7 @@ import "./BenefitOne.scss";
 import { UserCaseCard } from "../../Shared/UserCaseCard/UserCaseCard";
 import { TextBlock } from "../../Shared/TextBlock/TextBlock";
 import  arrowBig   from "../../../assets/arrow-big.svg";
+import { CustomButton } from "../../Shared/CustomBtn/CustomBtn";
 
 const userCaseData = {
   name: "Jakub Kowalski",
@@ -22,9 +23,10 @@ export const BenefitOne = () => {
   return (
         <section className="benefit-section">
           <div className="benefit-content">
-            <img src={arrowBig} className="arrow-big" alt="arrow"/>
+            <CustomButton text={textBlockData.btnText}  className="adaptive-btn"/>
+            <img src={arrowBig} className=" arrow arrow-big" alt="arrow"/>
             <UserCaseCard userCaseData={userCaseData} />
-            <TextBlock  textBlockData={textBlockData}/>
+            <TextBlock  textBlockData={textBlockData} />
           </div>
         </section>
   );

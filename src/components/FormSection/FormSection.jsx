@@ -14,7 +14,7 @@ export const FormSection = () => {
         <TextBlock textBlockData={formTextData} displayBtn={false} />
       </div>
       <div className="form-body-block">
-        <JoinForm formId="2"/>
+        <JoinForm formId="2" showLearnBtn={false}/>
       </div>
     </section>
   );

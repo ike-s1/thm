@@ -3,6 +3,7 @@ import "./Features.scss";
 import { FeatureItem } from "./FeatureItem/FeatureItem";
 import { CustomButton } from "../Shared/CustomBtn/CustomBtn";
 import titleDecour from "../../assets/key-features-heading.svg";
+import titleDecourSmall from "../../assets/title-decour-small.svg";
 
 
 const featuresData = [

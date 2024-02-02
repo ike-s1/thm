@@ -88,6 +88,11 @@ header {
         text-decoration-line: underline;
         width: 159px;
 
+        @media (max-width: 1280px) {
+            display: none;
+        }
+
+
         &.hidden {
             visibility: hidden;
         }

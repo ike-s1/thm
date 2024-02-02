@@ -2,7 +2,8 @@ import React from "react";
 import "./BenefitTwo.scss";
 import { UserCaseCard } from "../../Shared/UserCaseCard/UserCaseCard";
 import { TextBlock } from "../../Shared/TextBlock/TextBlock";
-import  arrowMedium   from "../../../assets/arraw-medium.svg";
+import arrowMedium from "../../../assets/arraw-medium.svg";
+import { CustomButton } from "../../Shared/CustomBtn/CustomBtn";
 
 const userCaseData = {
   name: "Ryan Taylor",
@@ -18,12 +19,13 @@ const textBlockData = {
 
 export const BenefitTwo = () => {
   return (
-        <section className="benefit-section two">
-          <div className="benefit-content">
-            <img src={arrowMedium} className="arrow-medium" alt="arrow"/>
-            <TextBlock  textBlockData={textBlockData}/>
-            <UserCaseCard userCaseData={userCaseData} />
-          </div>
-        </section>
+    <section className="benefit-section two">
+      <div className="benefit-content">
+        <img src={arrowMedium} className=" arrow arrow-medium" alt="arrow" />
+        <TextBlock textBlockData={textBlockData} />
+        <UserCaseCard userCaseData={userCaseData} />
+        <CustomButton text={textBlockData.btnText} className="adaptive-btn" />
+      </div>
+    </section>
   );
 };

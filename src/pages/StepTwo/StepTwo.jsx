@@ -3,6 +3,16 @@ import "./StepTwo.scss";
 import { CheckboxItem } from "./CheckboxItem/CheckboxItem";
 import { useNavigate } from "react-router-dom";
 import { CustomButton } from "../../components/Shared/CustomBtn/CustomBtn";
+import Airtable from "airtable";
+
+
+const airtableApiKey = "patInCOT36GKWxABG.fd3cc6b8d3e7480db6d6f244979895b7c138a2bb443ed66a418f625dcbaa76b6";
+const airtableBaseId = "appwOe1JDCSHXMVux";
+const airTableName = "options";
+
+
+
+const base = new Airtable({ apiKey: airtableApiKey }).base(airtableBaseId);
 
 const checkboxArray = [
   "Detailed blockchain analytics of users who have completed the survey",
@@ -19,6 +29,8 @@ const checkboxArray = [
   "Fetching additional user data (GEO, IP, OS, browser, etc.)",
   "Integration with Google Sheets and CRM",
 ];
+
+
 
 export const StepTwo = () => {
   const [selectedCheckboxes, setSelectedCheckboxes] = useState([]);
@@ -37,8 +49,25 @@ export const StepTwo = () => {
   };
 
   const handleConfirmClick = () => {
-    navigate('/step-three')
-  }
+    const options = selectedCheckboxes.map(index => checkboxArray[index]);
+    
+    base(airTableName).create(
+      [
+        {
+          fields: {
+            options: [options.map(o => ({o}))]
+          }
+        },
+      ],
+      (err) => {
+        if (err) {
+          console.error("Error creating record:", err);
+        } else {
+          navigate('/step-three');
+        }
+      }
+    );
+  };
 
   useLayoutEffect(() => {
     window.scrollTo(0, 0);

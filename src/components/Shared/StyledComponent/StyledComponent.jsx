@@ -1,4 +1,5 @@
 import React from 'react';
+import './StyledComponent.scss';
 
 const StyledComponent = ({ backgroundColor="#FAFAF5", children }) => {
   const componentStyle = {
@@ -12,8 +13,8 @@ const StyledComponent = ({ backgroundColor="#FAFAF5", children }) => {
   };
 
   return (
-    <div style={componentStyle}>
-      <div style={childrenStyle}>
+    <div  className="styled-component" style={componentStyle}>
+      <div className="styled-children-component" style={childrenStyle}>
         {children}
       </div>
     </div>

@@ -5,7 +5,7 @@ import { UserCaseCard } from "../Shared/UserCaseCard/UserCaseCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination} from "swiper/modules";
+import { Pagination } from "swiper/modules";
 
 const SwiperSlidesArray = [
   {
@@ -40,7 +40,7 @@ export const UserCases = () => {
   const [swiper, setSwiper] = useState(null);
 
   const handleSlideChange = (curSwiper) => {
-    if ((swiper?.activeIndex  - 1)< curSwiper.activeIndex) {
+    if (swiper?.activeIndex - 1 < curSwiper.activeIndex) {
       setHidePrevSlide(false);
     }
   };
@@ -60,7 +60,28 @@ export const UserCases = () => {
           pagination={{
             clickable: true,
           }}
-          slidesPerView={2.95}
+          breakpoints={{
+            1281: {
+              slidesPerView: 2.95,
+              spaceBetween: 20,
+            },
+            961: {
+              slidesPerView: 1.45,
+              spaceBetween: 20,
+            },
+            769: {
+              slidesPerView: 1.2,
+              spaceBetween: 20,
+            },
+            481: {
+              slidesPerView: 1.1,
+              spaceBetween: 20,
+            },
+            361: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            }
+          }}
           loop={true}
           onSlideChange={handleSlideChange}
           onSwiper={handleSwiperInit}

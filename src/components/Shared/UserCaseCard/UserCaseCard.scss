@@ -8,9 +8,23 @@
     padding: 1px 1px 9px 1px;
     transition: all 0.4s ease-in-out;
 
-    &:hover {
-        transform: rotate(3deg);
+    @media (min-width: 1280px) {
+
+        &:hover {
+            transform: rotate(3deg);
+        }
     }
+
+    @media (max-width: 768px) {
+        text-align: left;
+        height: 353px;
+    }
+
+    @media (max-width: 480px) {
+        height: 374px;
+    }
+
+
 
     .user-case-content {
         width: 495px;
@@ -20,6 +34,16 @@
         background: $color_white;
         border-radius: 12px;
         padding: 30px;
+
+        @media (max-width: 768px) {
+            height: 345px;
+        }
+
+        @media (max-width: 480px) {
+            height: 366px;
+            padding: 30px 20px 20px 18px;
+        }
+
 
         .case-title {
             padding-left: 43px;
@@ -34,14 +58,19 @@
                 background-color: $color_black;
                 width: 34px;
                 position: absolute;
-                left:0;
+                left: 0;
                 top: 50%;
                 transform: translateY(-50%);
-              }
+            }
         }
 
         .case-text {
             margin-bottom: 9px;
+
+            @media (max-width: 480px) {
+                font-size: 14px;
+            }
+
         }
 
         .case-label {

@@ -8,11 +8,30 @@
     padding-top: 140px;
     padding-bottom: 160px;
 
+    @media(max-width: 1280px) {
+        align-items: flex-start;
+        width: 100%;
+        padding: 140px 40px 100px 38px;
+    }
+
+    @media(max-width: 768px) {
+        padding: 160px 20px 100px 20px;
+    }
+
 
     .step-two-title {
         font-size: 56px;
         font-weight: 700;
         margin-bottom: 30px;
+
+        @media(max-width: 1280px) {
+            margin-bottom: 20px;
+        }
+
+        @media(max-width: 768px) {
+            width: 334px;
+            font-size: 32px;
+        }
 
     }
 
@@ -23,6 +42,21 @@
         margin-bottom: 60px;
         text-align: center;
 
+        @media(max-width: 1280px) {
+           max-width: 642px;
+           text-align: left;
+           margin-bottom: 30px;
+
+           br {
+              display: none;
+           }
+        }
+
+        @media(max-width: 768px) {
+            font-size: 14px;
+        }
+    
+
         span {
             font-weight: 700;
         }
@@ -31,10 +65,27 @@
     .checkbox-list {
         margin-bottom: 60px;
         width: 100%;
+
+        @media(max-width: 1280px) {
+           margin-bottom: 40px;
+        }
     }
 
     .custom-button {
         width: 604px;
+
+        @media(max-width: 1280px) {
+            width: 319px;
+        }
+
+        @media(max-width: 960px) {
+            width: 334px;
+        }
+
+        @media(max-width: 768px) {
+            width: 100%;
+        }
+    
     }
 
 }

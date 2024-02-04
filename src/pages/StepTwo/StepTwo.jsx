@@ -1,16 +1,14 @@
-import React, {  useLayoutEffect,  useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import "./StepTwo.scss";
 import { CheckboxItem } from "./CheckboxItem/CheckboxItem";
 import { useNavigate } from "react-router-dom";
 import { CustomButton } from "../../components/Shared/CustomBtn/CustomBtn";
 import Airtable from "airtable";
 
-
-const airtableApiKey = "patInCOT36GKWxABG.fd3cc6b8d3e7480db6d6f244979895b7c138a2bb443ed66a418f625dcbaa76b6";
+const airtableApiKey =
+  "patInCOT36GKWxABG.fd3cc6b8d3e7480db6d6f244979895b7c138a2bb443ed66a418f625dcbaa76b6";
 const airtableBaseId = "appwOe1JDCSHXMVux";
 const airTableName = "options";
-
-
 
 const base = new Airtable({ apiKey: airtableApiKey }).base(airtableBaseId);
 
@@ -30,8 +28,6 @@ const checkboxArray = [
   "Integration with Google Sheets and CRM",
 ];
 
-
-
 export const StepTwo = () => {
   const [selectedCheckboxes, setSelectedCheckboxes] = useState([]);
   const navigate = useNavigate();
@@ -49,24 +45,26 @@ export const StepTwo = () => {
   };
 
   const handleConfirmClick = () => {
-    const options = selectedCheckboxes.map(index => checkboxArray[index]);
-    
-    base(airTableName).create(
-      [
-        {
-          fields: {
-            options: [options.map(o => ({o}))]
-          }
-        },
-      ],
-      (err) => {
-        if (err) {
-          console.error("Error creating record:", err);
-        } else {
-          navigate('/step-three');
-        }
-      }
-    );
+    // const options = selectedCheckboxes.map((index) => checkboxArray[index]);
+
+    // base(airTableName).create(
+    //   [
+    //     {
+    //       fields: {
+    //         options: [options.map((o) => ({ o }))],
+    //       },
+    //     },
+    //   ],
+    //   (err) => {
+    //     if (err) {
+    //       console.error("Error creating record:", err);
+    //     } else {
+    //       navigate("/step-three");
+    //     }
+    //   }
+    // );
+
+    navigate("/step-three");
   };
 
   useLayoutEffect(() => {
@@ -81,7 +79,7 @@ export const StepTwo = () => {
         so that we can add them to the first release of our forms and start
         solving your needs.
         <br />
-        <span>You can choose up to 3 options.</span>
+        <span> You can choose up to 3 options.</span>
       </p>
       <div className="checkbox-list">
         {checkboxArray.map((c, index) => (
@@ -95,7 +93,7 @@ export const StepTwo = () => {
           />
         ))}
       </div>
-      <CustomButton text="Confirm"  onClick={handleConfirmClick} />
+      <CustomButton text="Confirm" onClick={handleConfirmClick} />
     </div>
   );
 };

@@ -31,6 +31,7 @@ export const Footer = () => {
         </div>
       </div>
       <img className="footer-logo-big" src={bigLogo} about="bigLogo" />
+      <p className="all-rights-bottom">©2024 All rights reserved.</p>
     </footer>
   );
 };

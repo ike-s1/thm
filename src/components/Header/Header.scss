@@ -10,6 +10,10 @@ header {
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
+
+    @media (max-width: 1280px) {
+        padding: 28px 40px;
+    }
 }
 
 .header-content {
@@ -26,6 +30,21 @@ header {
     max-width: 1228px;
     margin: 0 auto;
 
+    .menu-icon {
+        display: none;
+        cursor: pointer;
+        transition: all 0.2s ease-in;
+
+        &.active {
+            transform: rotate(90deg);
+        }
+
+        @media (max-width: 960px) {
+            display: block;
+        }
+    }
+
+
     .header-logo {
         width: 150px;
         height: 23px;
@@ -35,6 +54,14 @@ header {
         display: flex;
         justify-content: space-between;
         column-gap: 60px;
+
+        @media (max-width: 1280px) {
+            column-gap: 67px;
+        }
+
+        @media (max-width: 960px) {
+            display: none;
+        }
 
         a {
             display: inline-flex;
@@ -54,7 +81,6 @@ header {
                 left: 50%;
                 transform: translate(-50%, -50%);
                 white-space: nowrap;
-                font-weight: normal;
             }
 
 

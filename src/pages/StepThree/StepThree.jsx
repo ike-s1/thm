@@ -23,7 +23,7 @@ export const StepThree = () => {
       </div>
       <p className="step-three-text">
         As soon as our service is ready for use, we will notify you via email or
-        telegram. This will happen soon.Thank you!
+        telegram. This will happen soon.<br/>Thank you!
       </p>
       <CustomButton text="Back" onClick={handleBackClick} />
     </div>

@@ -15,11 +15,41 @@
         align-items: center;
         margin-bottom: 40px;
 
+        @media (max-width: 1280px) {
+            width: 709px;
+            height: 155px;
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        @media (max-width: 768px) {
+           height: 91px;
+           width: 302px;
+        }
+
+
         .not-found-title {
             font-size: 56px;
             font-weight: 700;
             margin-bottom: 34px;
             z-index: 5;
+
+            @media (max-width: 1280px) {
+                line-height: 1.1;
+                margin-bottom: 0;
+                max-width: 658px;
+            }
+    
+    
+            @media (max-width: 768px) {
+                line-height: 1;
+                font-size: 32px;
+                width: 100%;
+            }
+
+            @media (max-width: 480px) {
+                max-width: 288px;
+            }
         }
 
         img {
@@ -27,6 +57,18 @@
             top: 34%;
             left: 50%;
             transform: translate(-50%, -50%);
+
+            @media (max-width: 1280px) {
+                top: 48%;
+                left: 50%;
+                content: url("../../assets/step-three-decour-medium.svg");
+            }
+
+            @media (max-width: 768px) {
+                top: 50%;
+                width: 302px;
+                content: url("../../assets/step-three-decour-small.svg");
+            }
         }
 
     }
@@ -34,5 +76,13 @@
 
     .custom-button {
         width: 604px;
+
+        @media (max-width: 1280px) {
+            width: 319px;
+        }
+
+        @media (max-width: 960px) {
+            width: 334px;
+        }
     }
 }

@@ -10,6 +10,10 @@
     color:  $color_black;
     cursor: pointer;
 
+    @media(max-width: 768px) {
+        font-size: 14px;
+    }
+
     &.done {
         color: #A1A1A1; 
     }
@@ -18,11 +22,21 @@
         width: 30px;
         height: 30px;
         margin-right: 29px;
+
+        @media(max-width: 768px) {
+            width: 24px;
+            height: 24px;
+            margin: 12px;
+        }
     }
 
     .checkbox-number {
         font-weight: 700;
         margin-right: 10px;
+
+        @media(max-width: 768px) {
+           display: none;
+        }
     }
 
 }

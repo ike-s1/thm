@@ -18,7 +18,7 @@ const Header = () => {
     <header>
       <div className="header-content">
         <Link to="/">
-          <img src={logoBlack} alt="logo" />
+          <img src={logoBlack} className="header-logo" alt="logo" />
         </Link>
         <nav className="header-nav">
           {navElements.map((e) => (

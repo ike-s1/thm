@@ -29,6 +29,11 @@
 
             .custom-button {
                 width: 317px;
+
+                @media (max-width: 768px) {
+                    width: 100%;
+                }
+                
             }
 
             .user-case-card {
@@ -50,10 +55,6 @@
             width: 100%;
             text-align: center;
 
-            .user-case-card {
-                margin-bottom: 30px;
-
-             }
         }
 
         @media (max-width: 480px) {
@@ -84,6 +85,8 @@
 
             @media (max-width: 768px) {
                align-items: center;
+               max-width: 442px;
+               margin: 0 auto;
             }
 
 
@@ -93,6 +96,7 @@
                 
                 @media (max-width: 768px) {
                     margin-bottom: 20px;
+                    line-height: 1;
                  }
             }
 

@@ -25,6 +25,7 @@
     .compare-platforms-title {
         padding-top: 100px;
         padding-bottom: 106px;
+        line-height: 62px;
         position: relative;
         z-index: 2;
 
@@ -36,7 +37,7 @@
         &:before {
             content: "";
             position: absolute;
-            bottom: -35px;
+            bottom: -45px;
             left: 50%;
             width: 578px;
             height: 100%;

@@ -12,4 +12,12 @@
             transform: rotate(-3deg);
         }
     }
+
+    .text-block-text {
+        max-width: 620px;
+
+        @media (max-width: 960px) {
+            max-width: 100%;  
+        }
+    }
 }

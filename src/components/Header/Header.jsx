@@ -26,12 +26,12 @@ const Header = () => {
   }
 
   return (
-    <header className={activeMenu ? "active" : "closed"}>
+    <header className={activeMenu ? "active" : ""}>
       <div className="header-content">
         <Link to="/">
           <img src={logoBlack} className="header-logo" alt="logo" />
         </Link>
-        <nav className="header-nav">
+        <nav className={activeMenu ? "header-nav active" : "header-nav closed"}>
           {navElements.map((e) => (
             <p key={e} className="header-link">
               <a href={`#${e}`}>

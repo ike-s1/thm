@@ -10,45 +10,25 @@ header {
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
-    
+
     @media (max-width: 960px) {
-    
-            &.active {
-                background: rgba(250, 250, 245, 0.9);
-                height: 100vh;
-                backdrop-filter: blur(5px);
-                width: 100%;
-    
-                .header-nav {
-                    display: flex !important;
-                    flex-direction: column;
-                    align-items: center;
-                    width: 100%;
-                    left: 50%;
-                    top: 0;
-                    transform: translate(-50%, 0vh) !important;
-                    top: 127px;
-                    row-gap: 73px;
-                }
-    
-                .join-btn {
-                    display: block;
-                }
-    
-                .all-rights-header {
-                    display: block;
-                }
+
+        &.active {
+            background: rgba(250, 250, 245, 0.9);
+            height: 100vh;
+            backdrop-filter: blur(5px);
+            width: 100%;
+
+            .join-btn {
+                display: block;
             }
-    
-            &.closed {
-                .header-nav {
-                    @media (max-width: 960px) {
-                        transform: translate(-50%, -100vh) !important;
-                    }
-                }
+
+            .all-rights-header {
+                display: block;
             }
-    
         }
+
+    }
 
 
     .all-rights-header {
@@ -128,7 +108,7 @@ header {
             display: flex;
             justify-content: space-between;
             column-gap: 60px;
-            transition: transform 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
 
             @media (max-width: 1280px) {
                 column-gap: 67px;
@@ -136,6 +116,20 @@ header {
 
             @media (max-width: 960px) {
                 position: absolute;
+                display: flex !important;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                left: 50%;
+                transform: translate(-50%, -100vh) !important;
+                top: 127px;
+                row-gap: 73px;
+
+                &.active {
+                    transform: translate(-50%, 0vh) !important;
+                }
+
+
             }
 
 

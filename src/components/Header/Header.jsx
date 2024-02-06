@@ -6,7 +6,7 @@ import menuIcon from "../../assets/menu-icon.svg";
 import { CustomButton } from "../Shared/CustomBtn/CustomBtn";
 
 const Header = () => {
-  const navElements = ["About", "Features", "User Cases", "Compare Platforms"];
+  const navElements = ["About", "Features", "User Cases", /*"Compare Platforms"*/];
   const [activeMenu, setActiveMenu] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === "/";
@@ -33,7 +33,7 @@ const Header = () => {
         </Link>
         <nav className={activeMenu ? "header-nav active" : "header-nav closed"}>
           {navElements.map((e) => (
-            <p key={e} className="header-link">
+            <p key={e} className="header-link" onClick={()=> setActiveMenu(false)}>
               <a href={`#${e}`}>
                 <span>{e}</span>
                 <span className="hover-item">{e}</span>

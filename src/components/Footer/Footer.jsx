@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.scss";
-import bigLogo from "../../assets/footer-logo-big.png";
-import logoWhite from "../../assets/logo-white.png";
+import bigLogo from "../../assets/footer-logo-big.svg";
+import logoWhite from "../../assets/logo-white.svg";
 
 export const Footer = () => {
   return (
@@ -18,7 +18,7 @@ export const Footer = () => {
               <li className="column-item"><a href="#About">About</a></li>
               <li className="column-item"><a href="#Features">Features</a></li>
               <li className="column-item"><a href="#User Cases">Usercases</a></li>
-              <li className="column-item"><a href="#Compare Platforms">Compare platforms</a></li>
+              {/* <li className="column-item"><a href="#Compare Platforms">Compare platforms</a></li> */}
               <li className="column-item"><a href="">Privacy Policy</a></li>
               <li className="column-item"><a href="">Terms of Service</a></li>
               <li className="column-item"><a href="">Cookies Settings</a></li>

@@ -18,7 +18,7 @@ export const LandingPage = () => {
         <Features />
       </StyledComponent>
       <UserCases />
-      <ComparePlatforms />
+      {/* <ComparePlatforms /> */}
       <StyledComponent>
         <FormSection />
       </StyledComponent>

@@ -19,19 +19,19 @@ const SwiperSlidesArray = [
     text: `I decided to survey *only players of my Web3 game* to understand their satisfaction with the current game mechanics and upcoming changes. At the end of the survey, I chose to reward my players for their participation by minting special valuable NFT items directly in the form, underscoring the importance of their opinions. *Forms helped me strengthen my connection with the community even more*`,
   },
   {
-    name: "Jakub Kowalski 1",
-    title: "Web3 Startuper",
-    text: `While conducting user interviews for my Web3 startup idea, I gained valuable insights  into the behavior of potential early users. *THM helped me to collect and analyze blockchain data*, including transaction history, balance, NFT operations, and other criteria, and provided me with a deeper understanding of my clients' profiles`,
+    name: "P.Ranksy",
+    title: "NFT enthusiast",
+    text: `I decided to survey my NFT collectors about past and future projects. At the end of the survey, I rewarded them with unique NFTs.`,
   },
   {
-    name: "Ryan Taylor 2",
-    title: "P2E Game Founder",
-    text: `I decided to survey *only players of my Web3 game* to understand their satisfaction with the current game mechanics and upcoming changes. At the end of the survey, I chose to reward my players for their participation by minting special valuable NFT items directly in the form, underscoring the importance of their opinions. *Forms helped me strengthen my connection with the community even more*`,
+    name: "Mr.B",
+    title: "Famous blogger",
+    text: `I asked the community about my own NFT collection launch and rewarded them with NFT passes at the end of the survey, which they can exchange for NFTs from my main project.`,
   },
   {
-    name: "Jakub Kowalski 2",
-    title: "Web3 Startuper",
-    text: `While conducting user interviews for my Web3 startup idea, I gained valuable insights  into the behavior of potential early users. *THM helped me to collect and analyze blockchain data*, including transaction history, balance, NFT operations, and other criteria, and provided me with a deeper understanding of my clients' profiles`,
+    name: "D. Crypt",
+    title: "Crypto expert",
+    text: `We conducted a survey on crypto industry trends, and wallet analysis showed that participants with less than $10 tended to respond negatively.`,
   },
 ];
 

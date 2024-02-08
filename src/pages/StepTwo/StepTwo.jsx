@@ -1,14 +1,13 @@
-import React, { useLayoutEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import "./StepTwo.scss";
 import { CheckboxItem } from "./CheckboxItem/CheckboxItem";
 import { useNavigate } from "react-router-dom";
 import { CustomButton } from "../../components/Shared/CustomBtn/CustomBtn";
 import Airtable from "airtable";
 
-const airtableApiKey =
-  "patInCOT36GKWxABG.fd3cc6b8d3e7480db6d6f244979895b7c138a2bb443ed66a418f625dcbaa76b6";
-const airtableBaseId = "appwOe1JDCSHXMVux";
-const airTableName = "options";
+const airtableApiKey = import.meta.env.VITE_AIRTABLE_API_KEY;
+const airtableBaseId = import.meta.env.VITE_AIRTABLE_BASE_ID;
+const airTableName = "features";
 
 const base = new Airtable({ apiKey: airtableApiKey }).base(airtableBaseId);
 
@@ -45,31 +44,69 @@ export const StepTwo = () => {
   };
 
   const handleConfirmClick = () => {
-    // const options = selectedCheckboxes.map((index) => checkboxArray[index]);
+    const options = selectedCheckboxes.map((index) => checkboxArray[index]);
 
-    // base(airTableName).create(
-    //   [
-    //     {
-    //       fields: {
-    //         options: [options.map((o) => ({ o }))],
-    //       },
-    //     },
-    //   ],
-    //   (err) => {
-    //     if (err) {
-    //       console.error("Error creating record:", err);
-    //     } else {
-    //       navigate("/step-three");
-    //     }
-    //   }
-    // );
-
-    navigate("/step-three");
+    if(options.length > 0) {
+      base(airTableName).create(
+        [
+          {
+            fields: {
+              Options: options
+            },
+          },
+        ],
+        { typecast: true },
+        (err, records) => {
+          if (err) {
+            console.error("Error creating records:", err);
+          } else {
+            console.log("Records created:", records);
+            navigate("/step-three");
+          }
+        }
+      );
+    }else {
+      navigate("/step-three");
+    }
   };
 
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  useEffect(() => {
+    const handleBeforeUnload = async (e) => {
+      e.preventDefault()
+      const options = selectedCheckboxes.map((index) => checkboxArray[index]);
+
+      if(options.length > 0) {
+        base(airTableName).create(
+          [
+            {
+              fields: {
+                Options: options
+              },
+            },
+          ],
+          { typecast: true },
+          (err, records) => {
+            if (err) {
+              console.error("Error creating records:", err);
+            } else {
+              console.log("Records created:", records);
+              navigate("/step-three");
+            }
+          }
+        );
+      }
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
+  }, [selectedCheckboxes]);
 
   return (
     <div className="step-two-container">

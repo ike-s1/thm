@@ -6,10 +6,9 @@ import { CustomInput } from "../CustomInput/CustomInput";
 import { useNavigate } from "react-router-dom";
 import Airtable from "airtable";
 
-const airtableApiKey =
-  "patInCOT36GKWxABG.fd3cc6b8d3e7480db6d6f244979895b7c138a2bb443ed66a418f625dcbaa76b6";
-const airtableBaseId = "appwOe1JDCSHXMVux";
-const airTableName = "form";
+const airtableApiKey = import.meta.env.VITE_AIRTABLE_API_KEY;
+const airtableBaseId = import.meta.env.VITE_AIRTABLE_BASE_ID;
+const airTableName = "contacts";
 
 const base = new Airtable({ apiKey: airtableApiKey }).base(airtableBaseId);
 
@@ -59,35 +58,7 @@ export const JoinForm = ({ formId, showLearnBtn = true }) => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const saveData = async () => {
-    const isValid = validateInputs();
-
-    if (isValid) {
-      return new Promise((resolve, reject) => {
-        base(airTableName).create(
-          [
-            {
-              fields: {
-                name: name,
-                company: company,
-                telegram: telegram,
-                email: email,
-              },
-            },
-          ],
-          (err, records) => {
-            if (err) {
-              console.error("Error creating record:", err);
-              reject(err);
-            } else {
-              navigate("/step-two");
-              resolve(records);
-            }
-          }
-        );
-      });
-    }
-  };
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -99,10 +70,10 @@ export const JoinForm = ({ formId, showLearnBtn = true }) => {
           [
             {
               fields: {
-                name: name,
-                company: company,
-                telegram: telegram,
-                email: email,
+                Name: name,
+                Company: company,
+                Telegram: telegram,
+                Email: email,
               },
             },
           ],
@@ -135,10 +106,10 @@ export const JoinForm = ({ formId, showLearnBtn = true }) => {
             [
               {
                 fields: {
-                  name: name,
-                  company: company,
-                  telegram: telegram,
-                  email: email,
+                  Name: name,
+                  Company: company,
+                  Telegram: telegram,
+                  Email: email,
                 },
               },
             ],
